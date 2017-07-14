@@ -7,7 +7,7 @@ puts "#{organization}"
 
 Travis.access_token = Travis.github_auth(ENV['TRAVIS_TOKEN'])
 repos = Travis::Repository.find_all(owner_name: organization)
-  .select{|repo| repo.slug == 'IBM-Swift/CloudConfiguraiton'}
+  .select{|repo| repo.slug == 'IBM-Swift/CloudConfiguration'}
 	#.select{|repo| repo.slug == 'rolivieri/db-test'}
 	#.reject{|repo| repo.slug == 'rolivieri/travis-secrets-setter'}
 	#.reject{|repo| repo.slug == 'rolivieri/get-started-swift'}
