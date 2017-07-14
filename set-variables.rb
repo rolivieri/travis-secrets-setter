@@ -12,7 +12,7 @@ repos = Travis::Repository.find_all(owner_name: organization)
 	#.reject{|repo| repo.slug == 'rolivieri/travis-secrets-setter'}
 	#.reject{|repo| repo.slug == 'rolivieri/get-started-swift'}
 	#.select{|repo| Travis.user.admin_access.include?(repo)}
-keys = ['swift_4_dev_snapshot']
+keys = ['SWIFT_4_DEV_SNAPSHOT']
 repos.each do |repo|
 	keys.each do |key|
 		puts "Setting env var '#{key}' to '#{ENV[key]}' on project '#{repo.slug}'"
