@@ -1,7 +1,7 @@
 require 'travis'
 
-#organization = "IBM-Swift"
-organization = "rolivieri"
+organization = "IBM-Swift"
+#organization = "rolivieri"
 puts "Initiating program to update environment variables in Travis CI jobs for organization '#{organization}'."
 puts "#{organization}"
 
