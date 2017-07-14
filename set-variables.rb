@@ -15,7 +15,7 @@ repos = Travis::Repository.find_all(owner_name: organization)
 keys = ['swift-4-dev-snapshot', 'key2', 'key3']
 repos.each do |repo|
 	keys.each do |key|
-		puts "Setting env var '#{key}' on project '#{repo.slug}'"
+		puts "Setting env var '#{key}' to '#{ENV[key]}' on project '#{repo.slug}'"
 		repo.env_vars.upsert(key, "'#{ENV[key]}'", public: true)
 	end
 end
